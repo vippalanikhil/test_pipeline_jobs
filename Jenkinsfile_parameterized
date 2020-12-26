@@ -20,7 +20,7 @@ pipeline {
         // This can be http or https
         NEXUS_PROTOCOL = "http"
         // Where your Nexus is running
-        NEXUS_URL = "13.233.66.167:8081/"
+        NEXUS_URL = "13.234.239.106:8081"
         // Repository where we will upload the artifact
         NEXUS_REPOSITORY = "ncodeit-helloworld"
         // Jenkins credential id to authenticate to Nexus OSS
@@ -32,7 +32,7 @@ pipeline {
                 script {
                     
 				    // Let's clone the source
-                    git branch: "${params.BRANCH}", url: 'https://github.com/betawins/parametirize-job.git';
+                    git branch: "${params.BRANCH}", url: 'https://github.com/betawins/test_pipeline_jobs.git';
                    
                 } 
             }
