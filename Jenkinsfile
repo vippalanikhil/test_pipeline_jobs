@@ -33,18 +33,18 @@ pipeline {
         stage("mvn build") {
             steps {
                 script {
-				if (mvn build) {
+				
                     // If you are using dows then you should use "bat" step
                     // Since unit testing is out of the scope we skip them
                     sh '/opt/apache-maven-3.6.3/bin/mvn -Dmaven.test.failure.ignore clean package'
-					}
+					
                 }
             }
         }
         stage("publish to nexus") {
             steps {
                 script {
-				if (publish to nexus) {
+				
                     // Read POM xml file using 'readMavenPom' step , this step 'readMavenPom' is included in: https://plugins.jenkins.io/pipeline-utility-steps
                     pom = readMavenPom file: "pom.xml";
                     // Find built artifact under target folder
@@ -86,4 +86,4 @@ pipeline {
             }
         }
     }
-}
+
