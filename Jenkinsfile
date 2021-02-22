@@ -25,7 +25,7 @@ pipeline {
                 script {
                     
 				    // Let's clone the source
-                    git branch: "${params.BRANCH}", url: 'https://github.com/betawins/test_pipeline_jobs.git';
+                    git 'https://github.com/betawins/test_pipeline_jobs.git';
                    
                 } 
             }
