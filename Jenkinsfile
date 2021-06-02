@@ -4,7 +4,7 @@ pipeline {
  
      tools {
         // Note: this should match with the tool name configured in your jenkins instance (JENKINS_URL/configureTools/)
-        maven "Maven"
+        maven "maven"
         
     }
     environment {
@@ -36,7 +36,7 @@ pipeline {
 				
                     // If you are using dows then you should use "bat" step
                     // Since unit testing is out of the scope we skip them
-                    sh '/opt/apache-maven-3.6.3/bin/mvn -Dmaven.test.failure.ignore clean package'
+                    sh '/opt/maven/bin/mvn -Dmaven.test.failure.ignore clean package'
 					
                 }
             }
