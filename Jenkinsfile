@@ -36,7 +36,7 @@ pipeline {
 				
                     // If you are using dows then you should use "bat" step
                     // Since unit testing is out of the scope we skip them
-                    sh '/opt/maven/bin/mvn -Dmaven.test.failure.ignore clean package'
+                    sh 'mvn -Dmaven.test.failure.ignore clean package'
 					
                 }
             }
