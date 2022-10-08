@@ -25,7 +25,7 @@ pipeline {
                 script {
                     
 				    // Let's clone the source
-                    git 'https://github.com/betawins/test_pipeline_jobs.git';
+                    git 'https://github.com/vippalanikhil/test_pipeline_jobs.git';
                    
                 } 
             }
