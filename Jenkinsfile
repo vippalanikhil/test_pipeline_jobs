@@ -15,7 +15,7 @@ pipeline {
         // Where your Nexus is running
         NEXUS_URL = "107.20.128.157:8081/"
         // Repository where we will upload the artifact
-        NEXUS_REPOSITORY = "Project_1"
+        NEXUS_REPOSITORY = "project2"
         // Jenkins credential id to authenticate to Nexus OSS
         NEXUS_CREDENTIAL_ID = "nexus"
     }
