@@ -61,16 +61,16 @@ pipeline {
                             nexusVersion: NEXUS_VERSION,
                             protocol: NEXUS_PROTOCOL,
                             nexusUrl: NEXUS_URL,
-                            groupId: pom.groupId,
+                            groupId: com.ncodeit,
                             version: '${BUILD_NUMBER}',
                             repository: NEXUS_REPOSITORY,
                             credentialsId: NEXUS_CREDENTIAL_ID,
                             artifacts: [
                                 // Artifact generated such as .jar, .ear and .war files.
-                                [artifactId: pom.artifactId,
+                                [artifactId: ncodeit-hello-world,
                                 classifier: '',
                                 file: artifactPath,
-                                type: pom.packaging],
+                                type: war.packaging],
                                 // Lets upload the pom.xml file for additional information for Transitive dependencies
                                 [artifactId: pom.artifactId,
                                 classifier: '',
