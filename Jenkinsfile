@@ -69,8 +69,8 @@ pipeline {
                                 // Artifact generated such as .jar, .ear and .war files.
                                 [artifactId: ncodeit-hello-world,
                                 classifier: '',
-                                file: artifactPath,
-                                type: war.packaging],
+                                file: ncodeit-hello-world.war,
+                                type: war],
                                 // Lets upload the pom.xml file for additional information for Transitive dependencies
                                 [artifactId: pom.artifactId,
                                 classifier: '',
