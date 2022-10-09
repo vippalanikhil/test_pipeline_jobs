@@ -72,10 +72,7 @@ pipeline {
 				 file: ncodeit-hello-world-${BUILD_NUMBER}.war,
                                 type: war],
                                 // Lets upload the pom.xml file for additional information for Transitive dependencies
-                                [artifactId: pom.artifactId,
-                                classifier: '',
-                                file: "pom.xml",
-                                type: "pom"]
+                                                               
                             ]
                         );
                     } else {
